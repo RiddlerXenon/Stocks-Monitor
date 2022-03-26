@@ -4,7 +4,7 @@ Stocks monitor for Volga'IT 22
 
 ## Getting Started
 
-![alt text](https://dl.uploadgram.me/623f2b4b8dfb2h?raw)
+![](https://media2.giphy.com/media/rPX3cX18GWnfNRSeg0/giphy.gif?cid=790b7611e3acefa4d7d16cd98d8e652967a434567fcab5a9&rid=giphy.gif&ct=g)
 
 ## Download
 
