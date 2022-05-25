@@ -10,8 +10,10 @@ class LineChartWidget {
     int _now = (now.millisecondsSinceEpoch / 1000).round();
     int _yago = (_now - 31556926).round();
 
+    Ijf i = Ijf();
+
     return FutureBuilder<List>(
-      future: fetchCandles(http.Client(), symbol, _now, _yago),
+      future: i.fetchCandles(http.Client(), symbol, _now, _yago),
       builder: (context, snapshot3) {
         if (snapshot3.hasData) {
           if (snapshot3.data?[0] != false) {

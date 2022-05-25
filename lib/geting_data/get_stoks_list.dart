@@ -4,10 +4,12 @@ import 'package:flutter_application_1/geting_data/get_cur_pr.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-Future<List> fetchStocksList(http.Client client) async {
-  final response = await client.get(Uri.parse(
-      'https://finnhub.io/api/v1/stock/symbol?exchange=US&token=c8pok02ad3icps1jt07g'));
-  return stocksListFromJson(response.body);
+class Gbf {
+  Future<List> fetchStocksList(http.Client client) async {
+    final response = await client.get(Uri.parse(
+        'https://finnhub.io/api/v1/stock/symbol?exchange=US&token=c8pok02ad3icps1jt07g'));
+    return stocksListFromJson(response.body);
+  }
 }
 
 stocksListFromJson(String str) =>
@@ -30,8 +32,10 @@ class StocksList {
 
 class GetStoksList {
   static stocksListGet(_channel) {
+    Gbf g = Gbf();
+
     return FutureBuilder<List>(
-      future: fetchStocksList(http.Client()),
+      future: g.fetchStocksList(http.Client()),
       builder: (context, snapshot) {
         if (snapshot.hasError) {
           return const Center(
