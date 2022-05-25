@@ -8,4 +8,4 @@ Stocks monitor for Volga'IT 22
 
 ## Download
 
-Last release: https://github.com/RiddlerXenon/Stocks-Monitor/releases/tag/v0.1.0-beta
+Last release: https://github.com/RiddlerXenon/Stocks-Monitor/releases/tag/v0.1.0-beta.1
