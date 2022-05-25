@@ -1,16 +1,18 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
-Future<List> fetchCandles(http.Client client, symbol, uniow, unigo) async {
-  final response = await client.get(Uri.parse(
-      'https://finnhub.io/api/v1/stock/candle?symbol=$symbol&resolution=D&from=$unigo&to=$uniow&token=c8pok02ad3icps1jt07g'));
+class Ijf {
+  Future<List> fetchCandles(http.Client client, symbol, uniow, unigo) async {
+    final response = await client.get(Uri.parse(
+        'https://finnhub.io/api/v1/stock/candle?symbol=$symbol&resolution=D&from=$unigo&to=$uniow&token=c8pok02ad3icps1jt07g'));
 
-  if (response.body.toString() == '{"s":"no_data"}') {
-    return [false];
-  } else {
-    final parsed = candlesFromJson(response.body);
+    if (response.body.toString() == '{"s":"no_data"}') {
+      return [false];
+    } else {
+      final parsed = candlesFromJson(response.body);
 
-    return [parsed.c, parsed.t];
+      return [parsed.c, parsed.t];
+    }
   }
 }
 
